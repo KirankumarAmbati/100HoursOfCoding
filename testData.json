@@ -1,0 +1,19 @@
+[
+  {
+    "name":"Sravanthi K",
+    "branch":"MEC",
+    "technology":"Java"
+  },
+  
+  {
+    "name":"Kirankumar A",
+    "branch":"CSE",
+    "technology":"Java"
+  },
+  
+  {
+    "name":"Virag J",
+    "branch":"CSE",
+    "technology":"BIPM"
+  }
+]
