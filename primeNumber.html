@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prime Number</title>
+    <script type="text/javascript">
+      function isPrime()
+      {
+        var set = 0;
+
+        var num = document.getElementById("num").value;
+
+        document.getElementById("answer").innerHTML = "";
+
+        for(i=2; i<Math.sqrt(num);i++)
+        {
+          if(num % i == 0)
+          {
+            set = 1;
+            break;
+          }
+        }
+
+        if(set == 1)
+        {
+          document.getElementById("answer").innerHTML +="<h1 style='color:red'>Not a Prime  !!!</h1>";
+        }
+        else
+        {
+          document.getElementById("answer").innerHTML +="<h1 style='color:green'>Prime  !!!</h1>";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="input-group">
+      <span class="input-group-addon"></span>
+      <input type="number" class="form-control" id="num" placeholder="Enter the number">
+      <button onclick="isPrime()">Check</button>
+      <p id="answer"></p>
+
+    </div>
+  </body>
+</html>
