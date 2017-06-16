@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Palindrome</title>
+    <script type="text/javascript">
+      function isPalindrome()
+      {
+        var str = document.getElementById("str").value;
+
+        document.getElementById("answer").innerHTML = "";
+
+        var len = str.length;
+        
+        for(i=0; i<len;i++)
+        {
+          if(str[i]!=str[len-i-1])
+          {
+            break;
+          }
+        }
+
+        if(i==len)
+        {
+          document.getElementById("answer").innerHTML +="<h1 style='color:green'>Palindrome  !!!</h1>";
+        }
+        else
+        {
+          document.getElementById("answer").innerHTML +="<h1 style='color:red'>Not a Palindrome  !!!</h1>";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="input-group">
+      <span class="input-group-addon"></span>
+      <input type="text" class="form-control" id="str" placeholder="Enter the string">
+      <button onclick="isPalindrome()">Check</button>
+      <p id="answer"></p>
+
+    </div>
+  </body>
+</html>
