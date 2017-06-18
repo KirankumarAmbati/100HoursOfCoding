@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+	var xhr = new XMLHttpRequest();
+	var counter = 1;
+
+	function func()
+	{
+        	var resp = JSON.parse(xhr.responseText);
+		for(i=0; i< resp.length;i++)
+		{
+			document.getElementById("xyz").innerHTML += "\n<h1>Employee " + counter + ":</h1> \n" + resp[i].name +"\t"+resp[i].branch+"\t"+resp[i].technology;
+			counter++;
+		}
+		document.getElementById("submit").style.visibility="hidden";
+	
+			
+	}
+
+	xhr.open('GET', 'https://raw.githubusercontent.com/KirankumarAmbati/100HoursOfCoding/master/testData.json');
+	xhr.send();
+</script>
+</head>
+
+<body>
+<div id="xyz"></div>
+<button type="button" onclick="func()" id="submit">Submit</button>
+</body>
+
+</html>
