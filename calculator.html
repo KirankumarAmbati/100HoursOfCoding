@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <script src="./js/calci.js" charset="utf-8"></script>
+    <style media="screen">
+      button
+      {
+        margin: 2px !important;
+      }
+    </style>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <div style="width:20%; margin-top: 80px" id="calcu" class="center-block">
+
+      <input type="text" id="expression" class="col-md-10" style="margin-bottom:10px;">
+
+      <div>
+        <button class="btn btn-primary col-md-3" type="button" value="1" onclick="buttonClicked(this)">1</button>
+        <button class="btn btn-primary col-md-3" type="button" value="2" onclick="buttonClicked(this)">2</button>
+        <button class="btn btn-primary col-md-3" type="button" value="3" onclick="buttonClicked(this)">3</button>
+        <button class="btn btn-primary col-md-3" type="button" value="4" onclick="buttonClicked(this)">4</button>
+        <button class="btn btn-primary col-md-3" type="button" value="5" onclick="buttonClicked(this)">5</button>
+        <button class="btn btn-primary col-md-3" type="button" value="6" onclick="buttonClicked(this)">6</button>
+        <button class="btn btn-primary col-md-3" type="button" value="7" onclick="buttonClicked(this)">7</button>
+        <button class="btn btn-primary col-md-3" type="button" value="8" onclick="buttonClicked(this)">8</button>
+        <button class="btn btn-primary col-md-3" type="button" value="9" onclick="buttonClicked(this)">9</button>
+        <button class="btn btn-primary col-md-3" type="button" value="." onclick="buttonClicked(this)">.</button>
+        <button class="btn btn-primary col-md-3" type="button" value="0" onclick="buttonClicked(this)">0</button>
+        <button class="btn btn-primary col-md-3" type="button" value="+" onclick="buttonClicked(this)">+</button>
+
+        <button class="btn btn-primary col-md-3" type="button" value="-" onclick="buttonClicked(this)">-</button>
+
+        <button class="btn btn-primary col-md-3" type="button" value="*" onclick="buttonClicked(this)">*</button>
+
+        <button class="btn btn-primary col-md-3" type="button" value="/" onclick="buttonClicked(this)">/</button>
+        <button class="btn btn-primary col-md-3" type="button" value="=" onclick="buttonClicked(this)">=</button>
+        <button class="btn btn-primary col-md-6" type="button" value="AC" onclick="buttonClicked(this)">AC</button>
+        <button class="btn btn-primary col-md-9" type="button" value="OFF" onclick="buttonClicked(this)">OFF</button>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
