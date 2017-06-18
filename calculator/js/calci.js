@@ -19,7 +19,7 @@ function buttonClicked(objectPassed)
 {
     var str = objectPassed.value;
 
-    if (str!="=" && str!="AC" && str!="OFF" && str!="ON")
+    if (str!="=" && str!="AC" && str!="OFF" && str!="ON" && str!="DEL")
     {
       expression+=str;
       document.getElementById("expression").value=expression;
@@ -45,10 +45,15 @@ function buttonClicked(objectPassed)
           self.disabled = false;
       }
     }
+    else if (str=="DEL")
+    {
+      expression=expression.slice(0,-1);
+      document.getElementById("expression").value=expression;
+    }
     else
     {
       result = eval(expression);
       document.getElementById("expression").value=result;
-      expression="result";
+      expression=result;
     }
 }
