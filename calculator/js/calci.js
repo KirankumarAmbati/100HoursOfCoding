@@ -19,7 +19,7 @@ function buttonClicked(objectPassed)
 {
     var str = objectPassed.value;
 
-    if (str!="=" && str!="AC" && str!="OFF")
+    if (str!="=" && str!="AC" && str!="OFF" && str!="ON")
     {
       expression+=str;
       document.getElementById("expression").value=expression;
@@ -31,7 +31,19 @@ function buttonClicked(objectPassed)
     }
     else if (str=="OFF")
     {
-      document.getElementById("calcu").style.visibility="hidden";
+      for (var i = 0; i < buttons.length-1; i++)
+      {
+          var self = buttons[i];
+          self.disabled = true;
+      }
+    }
+    else if (str=="ON")
+    {
+      for (var i = 0; i < buttons.length-1; i++)
+      {
+          var self = buttons[i];
+          self.disabled = false;
+      }
     }
     else
     {
