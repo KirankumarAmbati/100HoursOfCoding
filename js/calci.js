@@ -2,6 +2,20 @@ var expression = "";
 
 var result = 0;
 
+var buttons = document.getElementsByTagName("button");
+
+for (var i = 0; i < buttons.length; i++) {
+    var self = buttons[i];
+
+    self.addEventListener('click', function (event) {
+        // prevent browser's default action
+        event.preventDefault();
+
+        buttonClicked(this);
+
+    }, false);
+}
+
 function buttonClicked(objectPassed)
 {
   var str = objectPassed.value;
