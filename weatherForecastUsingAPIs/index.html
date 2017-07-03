@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+  </head>
+  <script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    var forecast;
+    function update()
+    {
+      xhr.open("GET", "http://api.openweathermap.org/data/2.5/weather?q="+document.getElementById('city').value+"&APPID=0b7eab7c8249f109134711f710b7bb60");
+      xhr.send();
+    }
+
+    function retrieve()
+    {
+      document.getElementById('div1').style.display="block";
+      document.getElementById('div2').style.display="none";
+      document.getElementById('home').style.display="block";
+
+      forecast = JSON.parse(xhr.responseText);
+
+      document.getElementById("cityName").innerHTML=forecast.name;
+      document.getElementById("long").innerHTML=forecast.coord.lon;
+      document.getElementById("lati").innerHTML=forecast.coord.lat;
+
+
+      document.getElementById("forecast").innerHTML=forecast.weather[0].description;
+
+      document.getElementById("temp").innerHTML=parseInt(forecast.main.temp)-273+" C";
+      document.getElementById("pres").innerHTML=forecast.main.pressure+" mb";
+      document.getElementById("humd").innerHTML=forecast.main.humidity+" %";
+      document.getElementById("maxTemp").innerHTML=parseInt(forecast.main.temp_max)-273+" C";
+      document.getElementById("minTemp").innerHTML=parseInt(forecast.main.temp_min)-273+" C";
+    }
+
+    function home()
+    {
+      document.getElementById('div1').style.display="none";
+      document.getElementById('div2').style.display="block";
+      document.getElementById('home').style.display="none";
+    }
+  </script>
+  <body>
+
+    <h1>Weather Forecast :</h1>
+    <div id="div1" style="display:none">
+      <p>City Name:<span id ="cityName">Name: </span></p>
+      <p>Longitude:<span id ="long"> </span></p>
+      <p>Latitude: <span id="lati"></span></p>
+      <br>
+    <h2>Weather: </h2>
+      <p>Forecasting: <span id="forecast"></span></p>
+      <p>Temperature: <span id="temp"></span></p>
+      <p>Pressure: <span id="pres"></span></p>
+      <p>Humidity: <span id="humd"></span></p>
+      <p>Max Temp:<span id ="maxTemp"></span></p>
+      <p>Min Temp: <span id="minTemp"></span></p>
+    </div>
+    <div id="div2">
+      <input type="text" id="city">
+      <button type="button" onclick="update()">Update</button>
+      <button type="button" onclick="retrieve()"> Forecast !! </button>
+    </div>
+
+    <button type="button" id="home" style="display:none" onclick=home()>Home</button>
+  </body>
+</html>
