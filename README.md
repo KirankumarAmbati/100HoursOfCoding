@@ -1,15 +1,13 @@
-This repository is a collection of short and sweet tools I had written to learn small concepts in various languages.
+This repository is a collection of short and sweet tools I had written to learn small concepts in various languages:
 
-Append the following after https://kirankumarambati.github.io/100HoursOfCoding/ to see various applications:
+[Calculator](https://kirankumarambati.github.io/100HoursOfCoding/calculator/calculator.html)
 
-/calculator/calculator.html         --- For a Calculator.
+[Dynamically changing CSS Styles.](https://kirankumarambati.github.io/100HoursOfCoding/dynamicStyling/dynamicStyling.html)
 
-/dynamicStyling/dynamicStyling.html --- To see Dynamically changing CSS Styles. 
+[Toggle CSS of a Page](https://kirankumarambati.github.io/100HoursOfCoding/dynamicStyling/toggleCSS.html)
 
-/dynamicStyling/toggleCSS.html      --- To Toggle CSS of a Page.
+[Enter a City Name to see its current weather Report](https://kirankumarambati.github.io/100HoursOfCoding/weatherForecastUsingAPIs/)
 
-/weatherForecastUsingAPIs/          --- Enter a City Name to see its current weather Report. 
+[Check Whether entered number is prime or Not](https://kirankumarambati.github.io/100HoursOfCoding/primeNumber.html)
 
-/primeNumber.html                   --- To Check Whether enteres numer is prime or Not. 
-
-/palindrome.html                    --- To check whether a String is Palindrome or Not.  
+[Check whether a String is Palindrome or Not](https://kirankumarambati.github.io/100HoursOfCoding/palindrome.html)
